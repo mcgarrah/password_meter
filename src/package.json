@@ -16,12 +16,11 @@
   },
   "dependencies": {},
   "scripts": {
-    "do-browserify": "browserify ts/*.ts -p [ tsify --noImplicitAny ] -o PasswordMeter.js"
+    "do-max": "browserify ts/*.ts -p [ tsify --noImplicitAny ] -o PasswordMeter.js",
+    "do-min": "browserify ts/*.ts -t babelify -t uglifyify -p [ tsify --noImplicitAny ] -o PasswordMeter.js"
   },
   "browserify": {
     "transform": [
-      "babelify",
-      "uglifyify"
     ]
   }
 }
