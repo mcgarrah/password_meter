@@ -959,7 +959,7 @@ export module RuleFunctions {
             problemText = (pw.match(SYMBOLS))[0].escapeHTML();
             reasonWhy = "14% of people also use letters, followed by symbols, followed by digits";
             var startOfSymbols = pw.search(SYMBOLS); // find start of symbols
-            // XXXstroucki why are we overwriting problemText?
+            // Are we overwriting problemText to clean out special HTML characters?
             problemText = pw.slice(startOfSymbols).escapeHTML();
             // move symbols somewhere in the middle
             var loc1 = Math.floor(1 + Math.random() * (startOfSymbols - 1));
