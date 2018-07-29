@@ -1,15 +1,17 @@
 # Password Meter
 
-This project implements a data-driven password meter. Its effects on password security and usability were evaluated in the following publication: Ur et al. "Design and Evaluation of a Data-Driven Password Meter." In the Proceedings of CHI, 2017. https://dl.acm.org/citation.cfm?id=3026050
+This project implements a data-driven password meter based on the work from "Design and Evaluation of a Data-Driven Password Meter." in the Proceedings of CHI, 2017. https://dl.acm.org/citation.cfm?id=3026050
 
 The project is written in TypeScript, which transcompiles to JavaScript.
 
-An online demo of the meter is available at https://cups.cs.cmu.edu/meter/
+Modifications to function under current javascript were implemented along with minor changes to support a website registration process.
+
+An online demo of the modified version is available at http://www.phonemes.org/passwd-meter/
 
 
 ## Contact
 
-password-guessability@cs.cmu.edu
+mcgarrah@gatech.edu for any questions about this modified version
 
 
 ## Deploying (minimal customization required)
@@ -33,11 +35,14 @@ Note also that the meter expects all files to be in the same directory as each o
 
 ## Building from source
 
-  * Install command line runnable npm and browserify (the latter via, e.g., "npm install -g browserify")
+  * Install command line runnable npm
+  * Installation of browserify (via "npm install -g browserify") is optional
   * In the src directory, first run npm install to install dependencies
-  * Then run npm run do-browserify to generate the PasswordMeter.js file
+  * Then run npm run do-max to generate the PasswordMeter.js file suitable for debugging
+  * Run npm run do-min to generate a minified version of PasswordMeter.js for production
   * Place the PasswordMeter.js file with the other web files (i.e., in the /example directory)
-
+  * Update any dependent support libraries as necessary in /example
+  
 Finally, the neural network that estimates password strength needs to be trained for a site's particular password-composition policy. The parameter files must be provided in the configuration. The example neural network files we provide (/example/basic_3M.*) are trained for a 1class8 policy and will not provide accurate strength estimates for passwords created under different policies. For more detail on training the neural network, please see https://github.com/cupslab/neural_network_cracking
 
 
@@ -45,8 +50,8 @@ Finally, the neural network that estimates password strength needs to be trained
 
 Our meter depends on two common external web-development libraries:
 
-  * JQuery (minified version 2.2.4 JS file used for testing) https://jquery.com/
-  * Bootstrap (minified version 3.3.6 of both the CSS and JS file used for testing) http://getbootstrap.com/
+  * JQuery (minified version 3.2.1 JS file used for testing) https://jquery.com/
+  * Bootstrap (minified version 3.3.7 of both the CSS and JS file used for testing) http://getbootstrap.com/
   * lz-string.js http://pieroxy.net/blog/pages/lz-string/testing.html
   * loglevel https://github.com/pimterry/loglevel
 
@@ -91,9 +96,9 @@ We label each file with its intended purpose within the meter: main file; neural
 
   * **jquery-3.2.1.min.js** (Required external library) The jquery library (version 3.2.1), minified. https://jquery.com/
 
-  * **lz-string.js** (Required external library) A Javascript implementation of Lempel-Ziv-Welch (LZW) lossless compression. http://pieroxy.net/blog/pages/lz-string/testing.html
+  * **lz-string.min.js** (Required external library) A Javascript implementation of Lempel-Ziv-Welch (LZW) lossless compression. http://pieroxy.net/blog/pages/lz-string/testing.html
 
-  * **log-level.min.js** (Required external library) The loglevel library (version 1.6.0), minified https://github.com/pimterry/loglevel
+  * **log-level.min.js** (Required external library) The loglevel library (version 1.6.1), minified https://github.com/pimterry/loglevel
 
   * **nn-client.min.js** (Neural network computation) The main file for instantiating our artificial neural networks for calculating password guessability. This file loads worker.min.js as needed.
 
