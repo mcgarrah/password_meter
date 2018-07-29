@@ -86,6 +86,13 @@ td {
   text-align: left;
 }
 
+.statuslabel {
+  width: 340px;
+  margin: 0px;
+  padding: 0px 0px 0px 20px;
+  text-align: left;
+}
+
 .formInputBoxRow {
   width: 300px;
   margin: 0px;

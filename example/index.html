@@ -251,6 +251,12 @@ var ui = PasswordMeter.getUI();
                 <div class="portalToGenericAdviceModal portalToGenericAdviceModalColor" style="display:none" onclick="$('#myModalGeneric').modal('show');$('#okGeneric').prop('disabled', false);" data-target="#myModalGeneric">How to make strong passwords</div>
             </div>
         </div>
+        <div id="pwsymbol" class="pwfield">
+            <div class="statuslabel"><span style="color:red" id="length">&#x2716; Minimum <b>8 characters</span></div>
+            <div class="statuslabel"><span style="color:red" id="letter">&#x2716; A <b>lowercase</b> letter</span></div>
+            <div class="statuslabel"><span style="color:red" id="capital">&#x2716; A <b>capital (uppercase)</b> letter</span></div>
+            <div class="statuslabel"><span style="color:red" id="number">&#x2716; A <b>number</b> or <b>symbol</b></span></div>
+        </div>
         <div style="float:left; margin:0px; padding:0px; width: 100%; height:10px;">&nbsp;</div>
         <div id="confirmpw" class="pwfield" style="display: none;">
             <div class="boxlabel"><span class="">Confirm Password</span><span id="confirmDoesNotMatch" class="errorMessage errorMessageColor"> (Doesn't match!)</span><br /></div>
