@@ -8,10 +8,11 @@ Modifications to function under current javascript were implemented along with m
 
 An online demo of the modified version is available at http://www.phonemes.org/passwd-meter/
 
+Changes from the work of https://github.com/stroucki/password_meter are selectively incorporated against the codebase.
 
 ## Contact
 
-mcgarrah@gatech.edu for any questions about this modified version
+mcgarrah@gatech.edu for any questions about this modified version. For questions about the base version contact password-guessability@cs.cmu.edu
 
 
 ## Deploying (minimal customization required)
@@ -42,7 +43,25 @@ Note also that the meter expects all files to be in the same directory as each o
   * Run npm run do-min to generate a minified version of PasswordMeter.js for production
   * Place the PasswordMeter.js file with the other web files (i.e., in the /example directory)
   * Update any dependent support libraries as necessary in /example
-  
+
+
+```
+$ mkdir chi2017-passwd
+$ cd chi2017-passwd/
+$ git clone https://github.com/mcgarrah/password_check.git
+$ cd password_check/src
+$ npm --version
+6.2.0
+$ npm install
+$ ./node_modules/.bin/browserify --version
+16.2.2
+$ npm run do-max
+$ cp PasswordMeter.js ../example
+$ cd ..
+$ mkdir /var/www/html/passwd-meter
+$ cp example/* /var/www/html/passwd-meter
+```
+
 Finally, the neural network that estimates password strength needs to be trained for a site's particular password-composition policy. The parameter files must be provided in the configuration. The example neural network files we provide (/example/basic_3M.*) are trained for a 1class8 policy and will not provide accurate strength estimates for passwords created under different policies. For more detail on training the neural network, please see https://github.com/cupslab/neural_network_cracking
 
 
