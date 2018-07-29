@@ -1,18 +1,26 @@
 # Password Meter
 
-This project implements a data-driven password meter based on the work from "Design and Evaluation of a Data-Driven Password Meter." in the Proceedings of CHI, 2017. https://dl.acm.org/citation.cfm?id=3026050
+## Modifications to Project
 
-The project is written in TypeScript, which transcompiles to JavaScript.
+This is a modified version of the password meter mentioned below as a prototype for my HCI course at Gatech.
+It was used as part of a survey for password entry for a website registration process.
 
-Modifications to function under current javascript were implemented along with minor changes to support a website registration process.
+Modifications to function under current javascript were implemented along with minor changes to support a website registration process. Additional detailed information on how to build from source, updated external libraries, and removal of some external dependencies were implemented.
+
+Changes from the work of https://github.com/stroucki/password_meter are selectively incorporated against the codebase. His/her brilliant work saved me many hours.
 
 An online demo of the modified version is available at http://www.phonemes.org/passwd-meter/
 
-Changes from the work of https://github.com/stroucki/password_meter are selectively incorporated against the codebase.
+## Original Project
+
+The base project implemented a data-driven password meter from the work in "Design and Evaluation of a Data-Driven Password Meter." from the Proceedings of CHI, 2017. https://dl.acm.org/citation.cfm?id=3026050
+
+The project is written in TypeScript, which transcompiles to JavaScript.
 
 ## Contact
 
-mcgarrah@gatech.edu for any questions about this modified version. For questions about the base version contact password-guessability@cs.cmu.edu
+mcgarrah@gatech.edu for any questions about this modified version.
+For questions about the base version contact password-guessability@cs.cmu.edu
 
 
 ## Deploying (minimal customization required)
