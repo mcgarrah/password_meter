@@ -32,7 +32,7 @@ body {
   width: 0;
   height: 0;
   right: 100%;
-  top: 109px;
+  top: 175px;
   position: absolute;
   border-top: 7px solid transparent;
   border-right: 14px solid #BBBBBB;
@@ -40,6 +40,14 @@ body {
 }
 
 /* Colors */
+
+.weak {
+  color: red;
+}
+
+.strong {
+  color: green;
+}
 
 .headerText {
   color: black;
