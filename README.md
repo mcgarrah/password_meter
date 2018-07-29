@@ -5,7 +5,10 @@
 This is a modified version of the password meter mentioned below as a prototype for my HCI course at Gatech.
 It was used as part of a survey for password entry for a website registration process.
 
-Modifications to function under current javascript were implemented along with minor changes to support a website registration process. Additional detailed information on how to build from source, updated external libraries, and removal of some external dependencies were implemented.
+Modifications to function under current javascript were implemented initially.
+Next changes to support a website registration like process were introduced.
+The addition of an interactive password requirements dashboard were added.
+Additional detailed information on how to build from source, updated external libraries, and removal of some external dependencies were implemented.
 
 Changes from the work of https://github.com/stroucki/password_meter are selectively incorporated against the codebase. His/her brilliant work saved me many hours.
 
