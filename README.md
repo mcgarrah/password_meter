@@ -71,8 +71,8 @@ Our meter depends on two common external web-development libraries:
 
   * JQuery (minified version 3.2.1 JS file used for testing) https://jquery.com/
   * Bootstrap (minified version 3.3.7 of both the CSS and JS file used for testing) http://getbootstrap.com/
-  * lz-string.js http://pieroxy.net/blog/pages/lz-string/testing.html
-  * loglevel https://github.com/pimterry/loglevel
+  * lz-string.js (minified version 1.4.4 used for testing) http://pieroxy.net/blog/pages/lz-string/testing.html
+  * loglevel (minified version 1.6.1 used for testing) https://github.com/pimterry/loglevel
 
 
 ## Setup
