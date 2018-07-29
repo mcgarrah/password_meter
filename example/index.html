@@ -11,7 +11,7 @@
 <!-- Load JQuery and Bootstrap. (Can omit if already loaded on the page.) -->
 <script src="jquery-3.2.1.min.js"></script>
 <script src="bootstrap.min.js"></script>
-<script src="lz-string.min.js"></script> <!-- LZW decompression for dictionaries -->
+<script src="lz-string.js"></script> <!-- LZW decompression for dictionaries -->
 <script src="loglevel.min.js"></script>
 
 <!-- nn-client depends on Function.prototype.bind, so provide if necessary -->
@@ -131,16 +131,23 @@ var ui = PasswordMeter.getUI();
 <div class="mainBox">
     <!-- The main password-creation section -->
     <div class="grad-maroon createPWHeader">
-        <p class="headerText" style="margin-bottom: 0;">Create Your Password</p>
+        <p class="headerText" style="margin-bottom: 0;">Create Your Account</p>
     </div>
     <div class="passwordCreationSection">
         <div class="pwfield" style="display:inline-block; text-align: center; margin-left: auto; margin-right: auto;">
             <div id="meterfield" class="pwfield">
                 <div class="boxlabel">
-                    <div class="formInputBoxRow"><span class="">Username</span><span id="usernameTooShort" class="errorMessage errorMessageColor"> (Too short!)</span></div>
+                    <div class="formInputBoxRow"><span class="">Email / Username</span><span id="usernameTooShort" class="errorMessage errorMessageColor"> (Too short!)</span></div>
                     <div class="formInputBoxRow">
                         <input type="text" name="username" id="usernamebox" class="formInputBox" onkeyup="ui.continueCheck(false); ui.spawnRating();" />
                     </div>
+                    <div class="formInputBoxRow"><span class="">&nbsp;</span></div>
+
+                    <div class="formInputBoxRow"><span class="">Full Name</span><span id="nameTooShort" class="errorMessage errorMessageColor"> (Too short!)</span></div>
+                    <div class="formInputBoxRow">
+                        <input type="text" name="fullname" id="fullnamebox" class="formInputBox" onkeyup="ui.continueCheck(false); ui.spawnRating();" />
+                    </div>
+
                     <div class="formInputBoxRow"><span class="">&nbsp;</span></div>
                     <div class="formInputBoxRow"><span class="">Password</span><span id="passwordNonCompliant" class="errorMessage errorMessageColor"> (Must meet requirements!)</span></div>
                     <div class="formInputBoxRow">
@@ -252,7 +259,7 @@ var ui = PasswordMeter.getUI();
         </div>
         <div style="float:left; margin:0px; padding:0; width: 100%; height:50px;">&nbsp;
             <div style="float: left; margin:0; padding:0px; width: 200px; display:inline-block">&nbsp;</div>
-            <button type="button" id="continueButton" class="buttonLayout buttonColoring" style="margin:10px 0 0 41px;" onclick="ui.continueCheck(true);">Continue</button>
+            <button type="button" id="continueButton" class="buttonLayout buttonColoring" style="margin:10px 0 0 61px;" onclick="ui.continueCheck(true);">Signup</button>
         </div>
     </div>
 
