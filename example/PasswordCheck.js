@@ -11,6 +11,10 @@ $(document).ready(function () {
     //
     // Setup Submit to be disabled
     //
+    // Disabling until have time to fix the state check code
+    // Test for value of complexity meter is not working.
+    // Better test is the 'confirmbox' status
+    /*
     $("#continueButton").attr('disabled', 'disabled');
     $("form").keyup(function() {
         // To Disable Submit Button
@@ -19,6 +23,8 @@ $(document).ready(function () {
         //var password = $("#password").val();
         //if (!(password == "")) {
         // Validating Password field meets strength requirements
+
+        // confirmbox is the best method to test
         var result = $("#cups-password-meter-span").width;
         if (result >= 170) {
             // To Enable Submit Button
@@ -30,8 +36,13 @@ $(document).ready(function () {
             });
         }
     });
+    */
 
     // On Click for Submit Button
+    //
+    // Open for later checks on status changes
+    //
+    /*
     $("#continueButton").click(function() {
         $("#continueButton").css({
             "cursor": "default",
@@ -39,6 +50,7 @@ $(document).ready(function () {
         });
         alert("Password Check Prototype Form Submitted");
     });
+    */
 
     //
     // Password Validation Code Section
