@@ -7,7 +7,7 @@ It was used as part of a survey for password entry for a website registration pr
 
 Modifications to function under current javascript were implemented initially.
 Next changes to support a website registration like process were introduced.
-The addition of an interactive password requirements dashboard were added.
+The addition of an interactive password requirements dashboard were added. I am not overly proud of the password validation code as it just barely works. Improvements are very possible.
 Additional detailed information on how to build from source, updated external libraries, and removal of some external dependencies were implemented.
 
 Changes from the work of https://github.com/stroucki/password_meter are selectively incorporated against the codebase. His/her brilliant work saved me many hours.
