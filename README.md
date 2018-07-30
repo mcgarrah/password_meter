@@ -195,6 +195,15 @@ PasswordMeter.js:                    this.$("#usernameTooShort").show();
 PasswordMeter.js:                    this.$("#usernameTooShort").hide();
 ```
 
+Forced to type password twice even when "Show Password" enabled
+```
+index.html
+        <div id="confirmpw" class="pwfield" style="display: none;">
+            <div class="boxlabel"><span class="">Confirm Password</span><span id="confirmDoesNotMatch" class="errorMessage errorMessageColor"> (Doesn't match!)</span><br /></div>
+            <input type="password" name="confirmpassword" id="confirmbox" class="formInputBox" onkeyup="$('#showHidePWNonModal').prop('checked',false);ui.toggleShowHideNonModal();ui.continueCheck(false);" />
+            <br />
+        </div>
+```
 
 ## Initial Project Contributors
 
