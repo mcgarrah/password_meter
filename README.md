@@ -186,6 +186,16 @@ The list of functions that provide feedback, in descending order of priority, is
   * **characterClasses()** returns the number of different character classes (1-4) in the password
 
 
+## Known Issues
+
+Email is not checked for validate format in TypeScript
+```
+index.html:                    <div class="formInputBoxRow"><span class="">Email / Username</span><span id="usernameTooShort" class="errorMessage errorMessageColor"> (Too short!)</span></div>
+PasswordMeter.js:                    this.$("#usernameTooShort").show();
+PasswordMeter.js:                    this.$("#usernameTooShort").hide();
+```
+
+
 ## Initial Project Contributors
 
 Felicia Alfieri, Maung Aung, Lujo Bauer, Nicolas Christin, Jessica Colnago, Lorrie Faith Cranor, Henry Dixon, Pardis Emami Naeini, Hana Habib, Noah Johnson, William Melicher, Michael Stroucken, and Blase Ur* at Carnegie Mellon University and (*)the University of Chicago, United States.

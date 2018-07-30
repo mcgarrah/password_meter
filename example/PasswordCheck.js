@@ -105,14 +105,15 @@ $(document).ready(function () {
 
     // number or symbol
     function checkSpecial(password) {
-        if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/) || password.match(/([0-9])/)) {
+        //if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/) || password.match(/([0-9])/)) {
+        if (password.match(/([\W])/) || password.match(/([0-9])/)) {
             $('#number').removeClass('weak')
             $('#number').addClass('strong')  // color coded in CSS
-            return '<b>&#x2714;</b> A <b>number</b> or symbol'
+            return '<b>&#x2714;</b> A <b>number</b> or <b>symbol</b>'
         } else {
             $('#number').removeClass('strong')
             $('#number').addClass('weak')  // color coded in CSS
-            return '<b>&#x2716;</b> A <b>number</b> or symbol'
+            return '<b>&#x2716;</b> A <b>number</b> or <b>symbol</b>'
         }
     }
 
